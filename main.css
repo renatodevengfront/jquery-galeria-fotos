@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+/*estilizando o cabeçalho*/
+header {
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: #fff;
+    display: flex;  /*deixar o botão ao lado do título*/
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase;  /*todas as letras em maiúsculo*/
+    font-style: italic;
+}
+/*aplicando margem ao botão 'Nova imagem +'*/
+header button {
+    margin-left: 16px;
+}
+/*estilizando o formulário*/
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0; /*24px 'no topo e parte inferior' 0 'nas laterais'*/
+    text-align: center;
+    display: none; /*inicialmente o formulário não será exibido*/
+}
+/*colocar margem entre o título e os botões*/
+form h2 {
+    margin-bottom: 16px;
+}
+/*campo URL e botões 'adicionar' e 'cancelar'*/
+input, button{
+    padding: 8px;
+}
+/*botões*/
+button {
+    background-color: #009432;
+    border: none;   /*anular as bordas*/
+    cursor: pointer;    /*aplicar efeito quando o cursor estiver sobre os botões*/
+    font-weight: bold;  /*efeito nos botões em negrito*/
+    text-transform: uppercase;
+    color: #fff;
+}
+/*mudar a cor do botão 'cancelar'*/
+#botao-cancelar {
+    background-color: red;
+}
+/*estilização das imagens*/
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 200px; /*?*/
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s; /*tempo de transição do botão link*/
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 1;
+}
